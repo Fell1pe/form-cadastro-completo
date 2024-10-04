@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root{
+    --color-light-50: #f8f4fc;
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+
+    --color-purple-50: #7c3aed;
+    --color-purple-100: #a855f7;
+    --color-purple-900: #bf46ef;
+
+    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-900));
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    min-height: 100vh;
+    width: 100%;
+    background: var(--color-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#login_form{
+    background-color: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    max-width: 800px;
+    width: 100%;
+    animation: dark-to-light 0.3s ease-in-out;
+}
+
+#form_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form_header h1{
+    font-size: 32px;
+    position: relative;
+}
+
+#form_header h1::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    background-color: var(--color-purple-50);
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    border-radius: 5px;
+}
+
+#mode_icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--color-purple-900);
+}
+
+#social_media{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#social_media img{
+    width: 40px;
+    transition: transform 0.3s;
+}
+
+#social_media img:hover{
+    transform: scale(1.2);
+}
+
+fieldset {
+    border: 1px solid var(--color-dark-50);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--color-purple-900);
+}
+
+#inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.input-box {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 14px;
+    color: var(--color-dark-50);
+    margin-bottom: 5px;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border: 1px solid var(--color-dark-50);
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.input-field i {
+    font-size: 18px;
+    color: var(--color-purple-50);
+}
+
+.input-field input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-color: var(--color-purple-50);
+}
+
+#login_button {
+    border: none;
+    background-color: var(--color-purple-900);
+    color: var(--color-light-50);
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#login_button:hover {
+    background-color: var(--color-purple-100);
+    transform: scale(1.05);
+}
+
+.dark #login_form {
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+    animation: light-to-dark 0.3s ease-in-out;
+}
+
+.dark #login_form .input-field {
+    border-color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+}
+
+.dark #login_form .input-field input,
+.dark #login_form .input-field i {
+    color: var(--color-light-50);
+}
+
+@keyframes dark-to-light {
+    from {
+        background-color: var(--color-dark-100);
+    }
+    to {
+        background-color: var(--color-light-50);
+    }
+}
+
+@keyframes light-to-dark {
+    from {
+        background-color: var(--color-light-50);
+    }
+    to {
+        background-color: var(--color-dark-100);
+    }    
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #login_form {
+        padding: 20px;
+    }
+
+    .input-box {
+        flex: 1 1 100%;
+    }
+}
