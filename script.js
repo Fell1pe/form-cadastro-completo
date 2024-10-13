@@ -38,11 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let field of requiredFields) {
             if (field.value.trim() === '') {
                 event.preventDefault();
-                Swal.fire({
-                    icon: "info",
-                    title: "Oops...",
-                    text: "Por favor preencha todos os campos",
-                  });
+                alert('Por favor, preencha todos os campos obrigatórios.');
                 field.focus();
                 return;
             }
@@ -180,13 +176,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } catch (error) {
                 console.error(error);
-                alert('Ocorreu um erro ao buscar o CEP. Por favor, tente novamente.');
+                Swal.fire({
+                    icon: "info",
+                    title: "Oops...",
+                    text: "Ocorreu um erro ao buscar o CEP. Por favor, tente novamente!",
+                  });
             }
         } else {
             Swal.fire({
-                icon: "error",
+                icon: "info",
                 title: "Oops...",
-                text: "Digite um CEP de 8 dígitos",
+                text: "CEP não encontrado! informe o CEP de 8 dígitos",
               });
             limparFormulario();
         }
