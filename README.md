@@ -11,12 +11,13 @@ Porém mesmo sendo um projeto que a primeiro modo pareça fácil não é. Então
 **índice**
 
 * [Tecnologias_utilizadas](#tecnologias-utilizadas)
-* [Referencias](#Referencias)
-* [Informações](#Informações)
-* [Adição da verificação de email](#adição-da-verificação-de-email)
-* [Recursos](#Recursos)
+* [Referências](#referencias)
+* [Informações](#informações)
+* [HTML](#html)
+* [CSS](#css)
+* [Javascript](#javascript)
+* [Recursos](#recursos)
 * [Autores](#autores)
-
 
 
 ## Tecnologias utilizadas:
@@ -216,7 +217,7 @@ Porém dessa vez iremos começar a partir do número 11, veja o exemplo a seguir
 
 **Linkedin**
 
-[publicação do projeto no linkedin]()
+[publicação do projeto no linkedin](https://www.linkedin.com/posts/fellipe-zanin-1b1a7728b_nesta-publica%C3%A7%C3%A3o-venho-falar-sobre-uma-atividade-activity-7251046230078746624-sPZo?utm_source=share&utm_medium=member_desktop)
 
 ## Autores
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/140712280?v=4" width=115><br><sub>Fellipe Gabriel Zanin</sub>](https://github.com/Fell1pe) |
